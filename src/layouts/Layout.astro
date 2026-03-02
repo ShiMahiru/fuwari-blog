@@ -140,6 +140,13 @@ const bannerOffset =
 		<style define:vars={{
 			configHue,
 			'page-width': `${PAGE_WIDTH}rem`,
+            'bg-url': siteConfig.background.src ? `url(${siteConfig.background.src})` : 'none',
+			'bg-enable': siteConfig.background.enable ? '1' : '0',
+			'bg-position': siteConfig.background.position || 'center',
+			'bg-size': siteConfig.background.size || 'cover',
+			'bg-repeat': siteConfig.background.repeat || 'no-repeat',
+			'bg-attachment': siteConfig.background.attachment || 'fixed',
+			'bg-opacity': (siteConfig.background.opacity || 0.3).toString()
 		}}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 
 
